@@ -2103,6 +2103,7 @@ small {
     position: absolute !important;
     padding: 0px 10px;
     z-index: 99;
+    background-color: #fff !important;
     width: 100%;
     position: relative;
   }
