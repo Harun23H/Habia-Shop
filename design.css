@@ -94,12 +94,18 @@ html {
   flex-wrap: wrap;
   align-items: center;
   padding: 5px 10px;
-  background-color: #fff;
+  background-color: transparent;
   z-index: 99;
 }
 
+
+#header:hover{
+  background-color: #fff;
+}
+
 .logo1 {
-  width: 150px;
+  width: 130px;
+  height: 45px;
   border: solid;
 }
 
@@ -112,7 +118,7 @@ html {
 #header_sp a,
 .nav > a {
   text-decoration: none;
-  font-size: 0.8em;
+  font-size: clamp(.9em, 5vw, 1em);
   font-weight: 800;
   color: #000;
   opacity: 1;
@@ -142,13 +148,15 @@ html {
 .icons {
   position: relative;
   display: flex;
-  margin-top: 20px;
+  margin-top: 10px;
   gap: 20px;
 }
 
-.icons i {
+.icons > a > i, .love >a>i, .cart>a>i {
   font-size: 1.2em;
+  font-size: clamp(1em, 5vw, 1.4em);
   margin-top: 10px;
+  color: #000;
   transition: 1s;
 }
 
@@ -296,7 +304,7 @@ html {
 
 .newarrival {
   display: flex;
-  gap: 40px;
+  gap: 45px;
   padding: 30px;
 }
 
@@ -551,16 +559,6 @@ html {
   height: 360px;
 }
 
-.content:hover,
-.content2:hover,
-.content3:hover,
-.content4:hover,
-.content5:hover,
-.content6:hover,
-.content7:hover,
-.content8:hover {
-  border: solid 1px;
-}
 
 .add,
 .add2,
@@ -831,7 +829,9 @@ html {
   width: 397px;
   background-color: #fef4f4;
   line-height: 30px;
-  padding-left: 10px;
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  align-items: center;
 }
 
 .hotText > small {
@@ -2109,7 +2109,14 @@ small {
   }
 
   .icons {
-    margin: 0px 30px -8px -22px;
+    top: -5px;
+    left: -30px;
+  }
+
+  .icons > a > i,
+  .love > a > i,
+  .cart > a > i {
+    font-size: clamp(0.9em, 5.5vw, 1.8em);
   }
   /*******************
        handburger 
@@ -2117,19 +2124,21 @@ small {
   .nav > label {
     position: absolute;
     display: block;
+    z-index: 99;
     right: 2%;
-    top: 2%;
-    font-size: 1.8em;
+    top: 10%;
+    font-size: clamp(1em, 6vw, 1.8em);
     opacity: 0.6;
   }
 
   .nav_right {
     display: flex;
-    top: 110%;
+    flex-direction: column;
+    gap: 15px;
+    top: 120%;
     left: 0;
-    font-size: 1.2em;
-    height: 80vh;
-    width: 80%;
+    height: 70vh;
+    width: 68%;
     text-align: start;
     background-color: #fff !important;
     z-index: 99;
@@ -2153,8 +2162,10 @@ small {
     color: #080007 !important;
     padding: 10px 0;
     margin-left: 30px;
-    width: 100%;
+    width: 68%;
+    font-size: .95em !important;
     cursor: pointer;
+    border-bottom: solid 1px #00000024;
   }
 
   /*******************
@@ -2170,7 +2181,7 @@ small {
     flex-direction: column;
     gap: 10%;
     width: 100%;
-    height: 150vh;
+    height: 70vh;
   }
 
   /*******************
@@ -2179,18 +2190,20 @@ small {
 
   .headerButton {
     width: 100%;
-    right: 0.6%;
-    top: 130%;
+    right: -70%;
+    z-index: 99;
+    top: 113%;
     flex-direction: row;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 10px;
     margin-bottom: 50px;
   }
 
   .headerButton > button {
-    padding: 10px 3px;
-    width: 108px;
+    padding: 7px 2px;
+    width: 105px;
     background-color: #f3245e !important;
   }
 
@@ -2227,9 +2240,9 @@ small {
          col 1  div
   *******************/
   .col-1 {
-    margin-top: -9.9px;
     width: 100%;
-    height: 75vh;
+    height: 100dvh;
+    z-index: 77;
   }
 
   .col-1 > .mySlides {
@@ -2244,14 +2257,16 @@ small {
   }
 
   .text {
-    top: 20%;
+    top: 25%;
     left: 0%;
+    width: 100%;
+    height: 40%;
     padding: 10px;
   }
 
   .text > h2 {
-    font-size: 3em;
-    padding-bottom: 25px;
+    font-size: clamp(2em, 14vw, 4em);
+    padding-bottom: 0px;
   }
 
   .text > button {
@@ -2260,7 +2275,8 @@ small {
 
   .text > small {
     width: 100%;
-    font-size: 1.2em;
+    margin-bottom: -20px !important;
+    font-size: clamp(1em, 6vw, 2em);
     color: #f8e7e7;
     background-color: #050505;
     word-spacing: 2px;
@@ -2271,7 +2287,7 @@ small {
      col2 div
 *******************/
   .col-2 {
-    padding: 10px 0;
+    padding: 30px 0;
     height: 45vh;
     gap: 20px;
   }
@@ -2279,6 +2295,7 @@ small {
      new arrival 
 *******************/
   .newarrival {
+    margin-top: 40px;
     padding: 10px;
     gap: 10px;
   }
@@ -2308,7 +2325,7 @@ small {
     width: 35px;
     height: 35px;
     background-color: #ffffff97;
-    margin: 0 -14em 0 0;
+    margin: 0 -12em 0 0;
   }
 
   .reaction2 > span {
@@ -2332,6 +2349,7 @@ small {
 
   .newProduct {
     width: 100%;
+    background-color: #dddddd7c;
     padding-bottom: 100px !important;
   }
 
@@ -2434,7 +2452,7 @@ small {
   .con1-text7,
   .con1-text8 {
     width: 100%;
-    padding: 10px 0;
+    padding: 10px 10px;
     margin: auto;
     align-items: start;
     background-color: #faf9f0;
@@ -2842,10 +2860,6 @@ small {
     width: 250px;
     text-align: justify;
   }
-  /* 
-  .panel > a:hover {
-    background-color: #fff;
-  } */
 
   #home_shop {
     width: 100%;
