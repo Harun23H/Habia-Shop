@@ -98,8 +98,7 @@ html {
   z-index: 99;
 }
 
-
-#header:hover{
+#header:hover {
   background-color: #fff;
 }
 
@@ -118,7 +117,7 @@ html {
 #header_sp a,
 .nav > a {
   text-decoration: none;
-  font-size: clamp(.9em, 5vw, 1em);
+  font-size: clamp(0.9em, 5vw, 1em);
   font-weight: 800;
   color: #000;
   opacity: 1;
@@ -152,7 +151,9 @@ html {
   gap: 20px;
 }
 
-.icons > a > i, .love >a>i, .cart>a>i {
+.icons > a > i,
+.love > a > i,
+.cart > a > i {
   font-size: 1.2em;
   font-size: clamp(1em, 5vw, 1.4em);
   margin-top: 10px;
@@ -558,7 +559,6 @@ html {
   aspect-ratio: 1/1;
   height: 360px;
 }
-
 
 .add,
 .add2,
@@ -1583,15 +1583,14 @@ form > button > a {
 
 /************* login *****************/
 
-#loginPage {
+#loginPage, #forgetPage {
   padding-top: 20px;
   width: 100%;
   display: flex;
   margin-block: 100px;
 }
 
-#Login_info {
-  z-index: 99;
+#Login_info,#forget_info{
   position: relative;
   width: 50%;
   background-color: #bdbfc069;
@@ -2141,22 +2140,22 @@ small {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    top: 120%;
-    left: 0;
-    height: 70vh;
-    width: 68%;
+    top: -700%;
+    left: 39.8%;
+    height: 62vh;
+    width: 60%;
     text-align: start;
     background-color: #fff !important;
     z-index: 99;
     flex-direction: column;
     position: absolute;
-    opacity: 0;
+    opacity: 1;
     transition: 1s;
     padding-top: 10px;
   }
 
   #toggle:checked + .nav_right {
-    opacity: 1;
+    top: 100%;
   }
 
   .col-last {
@@ -2168,8 +2167,8 @@ small {
     color: #080007 !important;
     padding: 10px 0;
     margin-left: 30px;
-    width: 68%;
-    font-size: .95em !important;
+    width: 83%;
+    font-size: 0.80em !important;
     cursor: pointer;
     border-bottom: solid 1px #00000024;
   }
@@ -2512,8 +2511,11 @@ small {
 
   #existence_user {
     width: 100%;
-    z-index: 99;
     margin-bottom: 50px;
+  }
+
+  .info_required >form{
+    z-index: 99;
   }
 
   .existence_user {
@@ -2708,14 +2710,31 @@ small {
   }
 
   .col_A > h1 {
-    font-size: 1.7em;
+    font-size: 1.5em;
     margin-block: 20px;
     font-family: unset;
     padding: 0 20px;
   }
 
+
+  .col_1 > h4,
+.col_2 > h4{
+  font-size: .7em;
+}
+
+
+.col_1 > a,
+.col_2 > a {
+  font-size: 0.75em;
+}
+
+
+
+
+
+
   .col_A > p {
-    font-size: 0.9em;
+    font-size: 0.7em;
     opacity: 0.6;
     padding: 0 20px;
   }
@@ -2723,12 +2742,12 @@ small {
   .payment {
     gap: 10px;
     width: 250px;
-    margin: 0 0 0 15px;
     height: 100px;
+    margin-block: 15px;
   }
 
   .payment > a > i {
-    font-size: 2.5em;
+    font-size: 2.1em;
   }
 
   .col_B {
@@ -2748,7 +2767,7 @@ small {
   }
 
   .newsletter > h4 {
-    font-size: 1.2em;
+    font-size: .9em;
   }
 
   .newsletter {
@@ -2765,6 +2784,7 @@ small {
 
   .input > button {
     right: -1%;
+    font-size: .8em;
   }
 
   .social {
@@ -2788,15 +2808,20 @@ small {
 
   /********* login *************/
 
-  #loginPage {
+  #loginPage, #forgetPage {
     width: 100%;
     flex-direction: column;
     margin-block: 40px;
   }
 
-  #Login_info {
+  #Login_info,#forget_info {
     width: 100%;
+    z-index: 99;
     align-items: center;
+  }
+
+  .login_reqire {
+    z-index: 3;
   }
 
   #creatAccount {
@@ -2816,7 +2841,6 @@ small {
 
   .forgetWrapper {
     width: 100%;
-    border: solid red;
     margin: auto;
     background-color: #fff;
     padding: 20px;
@@ -2825,19 +2849,21 @@ small {
   /****************** shop **********************/
 
   #toggles:checked + .filters {
-    opacity: 1;
+    right: 15%;
   }
 
   .filters {
     background-color: #fff;
-    opacity: 0;
+    opacity: 1;
     top: -110px;
+    right: -110%;
     width: 85%;
     z-index: 99;
     position: absolute;
     height: 80vh;
     overflow: auto;
     padding: 20px;
+    transition: 1s;
   }
 
   .filter_icon {

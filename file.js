@@ -1,3 +1,5 @@
+// my accodion
+
 var acc = document.getElementsByClassName("accordion");
 var i;
 
@@ -13,37 +15,29 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-// var slideIndex = 0;
-// carousel();
+// my header 
 
-// function carousel() {
-//   var i;
-//   var x = document.getElementsByClassName("mySlides");
-//   for (i = 0; i < x.length; i++) {
-//     x[i].style.display = "none";
-//   }
-//   slideIndex++;
-//   if (slideIndex > x.length) {slideIndex = 1}
-//   x[slideIndex-1].style.display = "block";
-//   setTimeout(carousel, 5000); // Change image every 5 seconds
-// }
+var slideIndex = 0;
+carousel();
 
-
-const slider = document.getElementById("myPrice");
-let displayPrice = document.getElementById("price");
-displayPrice.innerHTML = slider.value;
- slider.oninput = function() {
- displayPrice.innerHTML = this.value
+function carousel() {
+  var i;
+  let x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 6000); // Change image every 6 seconds
 }
 
 
 
-
-
-
-// var slider = document.getElementById("myPrice");
-// var displayPrice = document.getElementById("price");
-// displayPrice.innerHTML = slider.value;
-// slider.oninput = function() {
-//   displayPrice.innerHTML = this.value;
-// }
+// my range
+const slider = document.getElementById("myPrice");
+let displayPrice = document.getElementById("price");
+displayPrice.innerHTML = slider.value;
+ slider.oninput = function() {
+ displayPrice.innerHTML = this.value;
+}
