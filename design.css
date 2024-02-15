@@ -2281,7 +2281,7 @@ small {
   .text > small {
     width: 100%;
     margin-bottom: -20px !important;
-    font-size: clamp(1em, 6vw, 2em);
+    font-size:1em;
     color: #f8e7e7;
     background-color: #050505;
     word-spacing: 2px;
