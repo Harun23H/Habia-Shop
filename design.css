@@ -60,6 +60,33 @@ html {
   border-bottom: solid;
 }
 
+
+
+.bck1 {
+  margin-block: 10px;
+  border: solid;
+  width: 70px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.bck1 > a > i {
+  font-size: 1.1em;
+}
+
+
+.bck{
+  color: #000;
+  position: absolute;
+  right: 2%;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
 /****************************************
             nav styles
 *****************************************/
@@ -1583,14 +1610,16 @@ form > button > a {
 
 /************* login *****************/
 
-#loginPage, #forgetPage {
+#loginPage,
+#forgetPage {
   padding-top: 20px;
   width: 100%;
   display: flex;
   margin-block: 100px;
 }
 
-#Login_info,#forget_info{
+#Login_info,
+#forget_info {
   position: relative;
   width: 50%;
   background-color: #bdbfc069;
@@ -2158,6 +2187,27 @@ small {
     top: 100%;
   }
 
+  .bck1 {
+    border: solid;
+    width: 70px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+
+  .bck1 > a > i {
+    font-size: 1em;
+  }
+
+
+  .bck{
+    font-size: 1em;
+    cursor: pointer;
+  }
+
   .col-last {
     top: 10%;
     left: 50%;
@@ -2168,7 +2218,7 @@ small {
     padding: 10px 0;
     margin-left: 30px;
     width: 83%;
-    font-size: 0.80em !important;
+    font-size: 0.8em !important;
     cursor: pointer;
     border-bottom: solid 1px #00000024;
   }
@@ -2270,7 +2320,7 @@ small {
   }
 
   .text > h2 {
-    font-size:2.8em;
+    font-size: 2.8em;
     padding-bottom: 0px;
   }
 
@@ -2281,7 +2331,7 @@ small {
   .text > small {
     width: 100%;
     margin-bottom: -20px !important;
-    font-size:1em;
+    font-size: 1em;
     color: #f8e7e7;
     background-color: #050505;
     word-spacing: 2px;
@@ -2514,7 +2564,7 @@ small {
     margin-bottom: 50px;
   }
 
-  .info_required >form{
+  .info_required > form {
     z-index: 99;
   }
 
@@ -2716,22 +2766,15 @@ small {
     padding: 0 20px;
   }
 
-
   .col_1 > h4,
-.col_2 > h4{
-  font-size: .7em;
-}
+  .col_2 > h4 {
+    font-size: 0.7em;
+  }
 
-
-.col_1 > a,
-.col_2 > a {
-  font-size: 0.75em;
-}
-
-
-
-
-
+  .col_1 > a,
+  .col_2 > a {
+    font-size: 0.75em;
+  }
 
   .col_A > p {
     font-size: 0.7em;
@@ -2767,7 +2810,7 @@ small {
   }
 
   .newsletter > h4 {
-    font-size: .9em;
+    font-size: 0.9em;
   }
 
   .newsletter {
@@ -2784,7 +2827,7 @@ small {
 
   .input > button {
     right: -1%;
-    font-size: .8em;
+    font-size: 0.8em;
   }
 
   .social {
@@ -2808,13 +2851,15 @@ small {
 
   /********* login *************/
 
-  #loginPage, #forgetPage {
+  #loginPage,
+  #forgetPage {
     width: 100%;
     flex-direction: column;
     margin-block: 40px;
   }
 
-  #Login_info,#forget_info {
+  #Login_info,
+  #forget_info {
     width: 100%;
     z-index: 99;
     align-items: center;
