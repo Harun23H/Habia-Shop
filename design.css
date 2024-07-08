@@ -121,7 +121,7 @@ html {
   flex-wrap: wrap;
   align-items: center;
   padding: 5px 10px;
-  background-color: transparent;
+  background-color: #fff;
   z-index: 99;
 }
 
